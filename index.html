@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Ateliê Moema Odontologia · Links</title>
+<meta name="description" content="Ateliê Moema Odontologia — uma clínica para chamar de sua. Agende sua avaliação, conheça nossos tratamentos e veja resultados." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<link rel="icon" type="image/png" href="favicon.png" />
+<style>
+  :root {
+    /* Paleta da marca */
+    --rose: #DC9998;
+    --rose-deep: #C77F7E;
+    --rose-soft: #EDC9C8;
+    --rose-mist: #F7E4E3;
+    --rose-tint: #FBF1F0;
+
+    --bg: #FBF7F4;
+    --bg-warm: #F5EDE8;
+    --card: #FFFFFF;
+
+    --ink: #3A2E2B;
+    --ink-soft: #5C4D49;
+    --ink-mute: #8A7A75;
+    --hairline: #EFE3DE;
+
+    --whatsapp: #6FA98C;
+    --whatsapp-deep: #5C9579;
+
+    --radius-lg: 24px;
+    --radius-md: 18px;
+    --shadow-soft: 0 1px 2px rgba(60, 35, 30, 0.04), 0 8px 24px rgba(60, 35, 30, 0.05);
+    --shadow-hover: 0 2px 4px rgba(60, 35, 30, 0.05), 0 14px 32px rgba(60, 35, 30, 0.09);
+
+    --serif: "Cormorant Garamond", "Times New Roman", serif;
+    --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+
+  body {
+    font-family: var(--sans);
+    color: var(--ink);
+    background: var(--bg);
+    background-image:
+      radial-gradient(ellipse 80% 50% at 50% 0%, var(--rose-tint) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 40% at 50% 100%, var(--bg-warm) 0%, transparent 70%);
+    background-attachment: fixed;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.5;
+  }
+
+  .page {
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 40px 22px 56px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  /* ---------- HERO ---------- */
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 18px;
+    padding-top: 12px;
+  }
+
+  .logo {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    background: var(--card);
+    border: 1px solid var(--hairline);
+    box-shadow: var(--shadow-soft);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .logo img {
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
+  }
+
+  .title-block { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+
+  h1.brand {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 1.15;
+    letter-spacing: 0.005em;
+    color: var(--ink);
+    margin: 0;
+  }
+  h1.brand .em {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--rose-deep);
+  }
+
+  .subtitle {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 17px;
+    color: var(--ink-soft);
+    margin: 0;
+    font-weight: 400;
+  }
+
+  .lead {
+    font-size: 13px;
+    color: var(--ink-mute);
+    margin: 14px 0 0;
+    letter-spacing: 0.01em;
+  }
+
+  /* ---------- CTA principal (WhatsApp) ---------- */
+  .cta-primary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    padding: 18px 22px;
+    border-radius: var(--radius-lg);
+    background: linear-gradient(180deg, var(--rose) 0%, var(--rose-deep) 100%);
+    color: #FFFFFF;
+    font-family: var(--sans);
+    font-weight: 500;
+    font-size: 15.5px;
+    letter-spacing: 0.005em;
+    text-decoration: none;
+    box-shadow:
+      0 1px 0 rgba(255,255,255,0.25) inset,
+      0 1px 2px rgba(120, 60, 60, 0.12),
+      0 12px 28px rgba(199, 127, 126, 0.32);
+    transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  .cta-primary:hover {
+    transform: translateY(-2px);
+    box-shadow:
+      0 1px 0 rgba(255,255,255,0.3) inset,
+      0 2px 4px rgba(120, 60, 60, 0.14),
+      0 18px 36px rgba(199, 127, 126, 0.4);
+  }
+  .cta-primary:active { transform: translateY(0); }
+  .cta-primary .wa-icon {
+    width: 22px; height: 22px; flex-shrink: 0;
+    filter: drop-shadow(0 1px 1px rgba(0,0,0,0.08));
+  }
+
+  .fineprint {
+    text-align: center;
+    font-size: 12px;
+    color: var(--ink-mute);
+    margin-top: -10px;
+    letter-spacing: 0.02em;
+  }
+  .fineprint .dot {
+    display: inline-block;
+    width: 3px; height: 3px;
+    background: var(--rose-soft);
+    border-radius: 50%;
+    margin: 0 8px;
+    vertical-align: middle;
+  }
+
+  /* ---------- Seções ---------- */
+  .section { display: flex; flex-direction: column; gap: 12px; }
+
+  .eyebrow {
+    text-align: center;
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 14.5px;
+    color: var(--ink-soft);
+    margin: 0 0 4px;
+    font-weight: 400;
+  }
+  .eyebrow::before, .eyebrow::after {
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 1px;
+    background: var(--rose-soft);
+    vertical-align: middle;
+    margin: 0 12px;
+    transform: translateY(-2px);
+  }
+
+  /* ---------- Card / Botão padrão ---------- */
+  .card-link {
+    display: grid;
+    grid-template-columns: 44px 1fr 18px;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 18px;
+    background: var(--card);
+    border: 1px solid var(--hairline);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    color: var(--ink);
+    box-shadow: var(--shadow-soft);
+    transition: transform .2s ease, box-shadow .25s ease, border-color .25s ease, background .25s ease;
+  }
+  .card-link:hover {
+    transform: translateY(-2px);
+    border-color: var(--rose-soft);
+    box-shadow: var(--shadow-hover);
+    background: #FFFEFD;
+  }
+  .card-link .glyph {
+    width: 44px; height: 44px;
+    border-radius: 12px;
+    background: var(--rose-tint);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: var(--rose-deep);
+    border: 1px solid var(--rose-mist);
+  }
+  .card-link .label {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+  }
+  .card-link .label .t {
+    font-size: 14.5px;
+    font-weight: 500;
+    color: var(--ink);
+    letter-spacing: 0.005em;
+  }
+  .card-link .label .s {
+    font-size: 12px;
+    color: var(--ink-mute);
+    font-weight: 400;
+  }
+  .card-link .chev {
+    width: 18px; height: 18px;
+    color: var(--rose-soft);
+    transition: transform .25s ease, color .25s ease;
+  }
+  .card-link:hover .chev {
+    transform: translateX(3px);
+    color: var(--rose-deep);
+  }
+
+  /* Variante destaque secundário (Invisalign) */
+  .card-link.featured {
+    border-color: var(--rose-soft);
+    background: linear-gradient(180deg, #FFFFFF 0%, #FDF6F5 100%);
+    box-shadow:
+      0 1px 2px rgba(60, 35, 30, 0.04),
+      0 10px 28px rgba(220, 153, 152, 0.16);
+  }
+  .card-link.featured .glyph {
+    background: var(--rose-mist);
+    border-color: var(--rose-soft);
+  }
+  .card-link.featured .label .s { color: var(--rose-deep); }
+
+  /* ---------- Rodapé ---------- */
+  .footer {
+    text-align: center;
+    margin-top: 16px;
+    padding-top: 28px;
+    border-top: 1px solid var(--hairline);
+    color: var(--ink-mute);
+    font-size: 12px;
+    line-height: 1.7;
+    letter-spacing: 0.015em;
+  }
+  .footer .name {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 15px;
+    color: var(--ink-soft);
+    display: block;
+    margin-bottom: 6px;
+  }
+  .footer .wa {
+    margin-top: 8px;
+    color: var(--ink-soft);
+  }
+  .footer .ornament {
+    display: block;
+    width: 24px;
+    height: 1px;
+    background: var(--rose-soft);
+    margin: 0 auto 18px;
+  }
+
+  /* ---------- Mobile fine-tune ---------- */
+  @media (max-width: 380px) {
+    .page { padding: 32px 18px 48px; }
+    h1.brand { font-size: 26px; }
+    .subtitle { font-size: 15.5px; }
+    .cta-primary { font-size: 14.5px; padding: 16px 18px; }
+    .card-link { padding: 14px 16px; grid-template-columns: 40px 1fr 16px; }
+    .card-link .glyph { width: 40px; height: 40px; font-size: 18px; }
+  }
+
+  @media (min-width: 520px) {
+    .page { padding-top: 56px; }
+  }
+
+  /* Acessibilidade */
+  a:focus-visible {
+    outline: 2px solid var(--rose-deep);
+    outline-offset: 3px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      transition-duration: 0.01ms !important;
+      animation-duration: 0.01ms !important;
+    }
+  }
+</style>
+</head>
+<body>
+  <main class="page" data-screen-label="Linktree Ateliê Moema">
+
+    <!-- ============ HERO ============ -->
+    <header class="hero">
+      <div class="logo">
+        <img src="favicon.png" alt="Ateliê Moema Odontologia" />
+      </div>
+
+      <div class="title-block">
+        <h1 class="brand">Ateliê <span class="em">Moema</span> Odontologia</h1>
+        <p class="subtitle">Uma clínica para chamar de sua ✨</p>
+      </div>
+
+      <p class="lead">Escolha como deseja iniciar seu atendimento:</p>
+
+      <a class="cta-primary"
+         href="https://wa.me/5511912582021?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais!"
+         target="_blank" rel="noopener">
+        <svg class="wa-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+        </svg>
+        Agendar avaliação no WhatsApp
+      </a>
+
+      <p class="fineprint">Atendimento particular <span class="dot"></span> Moema – SP</p>
+    </header>
+
+    <!-- ============ PROVA SOCIAL ============ -->
+    <section class="section" aria-labelledby="sec-prova">
+      <p id="sec-prova" class="eyebrow">Conheça quem já passou por aqui</p>
+
+      <a class="card-link" href="https://www.google.com/search?q=atelie+moema&sca_esv=7f321bca7b936533&rlz=1C1UEAD_enBR1086BR1086&sxsrf=ANbL-n7IXrnMioDVKaTFfKsSNfKLNBk3RQ%3A1778010861389&ei=7Ur6aebNFoGW5OUPn-fGmAc&biw=1528&bih=825&ved=0ahUKEwim-LHO9qKUAxUBC7kGHZ-zEXMQ4dUDCBE&uact=5&oq=atelie+moema&gs_lp=Egxnd3Mtd2l6LXNlcnAiDGF0ZWxpZSBtb2VtYTIGEAAYBxgeMgYQABgHGB4yBhAAGAcYHjIGEAAYBxgeMgYQABgHGB4yBhAAGAcYHjIIEAAYBxgeGAoyCBAAGAcYHhgKMgsQLhiABBjHARivATIIEAAYBRgeGApIgyFQzRNYghtwAXgBkAEAmAGPAaAB_QaqAQMwLje4AQPIAQD4AQGYAgagArEFwgIHECMYsAMYJ8ICChAAGEcY1gQYsAPCAg0QABiABBiKBRhDGLADwgIOEAAY5AIY1gQYsAPYAQHCAhcQLhjYAhi4BhjaBhjcBhjIAxiwA9gBAcICFxAuGNwGGLgGGNoGGNgCGMgDGLAD2AEBmAMAiAYBkAYTugYGCAEQARgJkgcDMS41oAf4KLIHAzAuNbgHnAXCBwcwLjIuMy4xyAclgAgB&sclient=gws-wiz-serp#lrd=0x94ce5b8ffd97cc9f:0x2a857f20913931b9,1,,,," target="_blank" rel="noopener">
+        <span class="glyph" aria-hidden="true">⭐</span>
+        <span class="label">
+          <span class="t">Ver avaliações</span>
+          <span class="s">Pacientes no Google</span>
+        </span>
+        <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+
+      <a class="card-link" href="https://ateliemoemaodontologia.com.br/#antesedepois" target="_blank" rel="noopener">
+        <span class="glyph" aria-hidden="true">✨</span>
+        <span class="label">
+          <span class="t">Antes e depois</span>
+          <span class="s">Resultados reais</span>
+        </span>
+        <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </section>
+
+    <!-- ============ TRATAMENTOS ============ -->
+    <section class="section" aria-labelledby="sec-trat">
+      <p id="sec-trat" class="eyebrow">Escolha seu caminho</p>
+
+      <a class="card-link" href="https://ateliemoemaodontologia.com.br/#tratamentos" target="_blank" rel="noopener">
+        <span class="glyph" aria-hidden="true">😁</span>
+        <span class="label">
+          <span class="t">Tratamentos</span>
+          <span class="s">Tudo o que cuidamos</span>
+        </span>
+        <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+
+      <a class="card-link featured" href="https://ateliemoemaodontologia.com.br/#invisa" target="_blank" rel="noopener">
+        <span class="glyph" aria-hidden="true">🦷</span>
+        <span class="label">
+          <span class="t">Invisalign — Simule seu sorriso</span>
+          <span class="s">Pré-visualização gratuita</span>
+        </span>
+        <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </section>
+
+    <!-- ============ INSTITUCIONAL ============ -->
+    <section class="section" aria-labelledby="sec-inst">
+      <p id="sec-inst" class="eyebrow">Conheça melhor a clínica</p>
+
+      <a class="card-link" href="https://ateliemoemaodontologia.com.br/#sobre" target="_blank" rel="noopener">
+        <span class="glyph" aria-hidden="true">👩‍⚕️</span>
+        <span class="label">
+          <span class="t">Sobre a Dra. Elis</span>
+          <span class="s">Quem cuida de você</span>
+        </span>
+        <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+
+      <a class="card-link" href="https://www.google.com/maps/place/Ateli%C3%AA+Moema+Odontologia+Especializada/data=!4m2!3m1!1s0x0:0x2a857f20913931b9?sa=X&ved=1t:2428&ictx=111" target="_blank" rel="noopener">
+        <span class="glyph" aria-hidden="true">📍</span>
+        <span class="label">
+          <span class="t">Localização</span>
+          <span class="s">Alameda dos Maracatins, 508</span>
+        </span>
+        <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+
+      <a class="card-link" href="https://ateliemoemaodontologia.com.br/" target="_blank" rel="noopener">
+        <span class="glyph" aria-hidden="true">💻</span>
+        <span class="label">
+          <span class="t">Site completo</span>
+          <span class="s">ateliemoemaodontologia.com.br</span>
+        </span>
+        <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+
+      <a class="card-link" href="https://www.instagram.com/dra.elisdrocha/" target="_blank" rel="noopener">
+        <span class="glyph" aria-hidden="true">📸</span>
+        <span class="label">
+          <span class="t">Instagram</span>
+          <span class="s">@ateliemoemaodontologia</span>
+        </span>
+        <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </section>
+
+    <!-- ============ RODAPÉ ============ -->
+    <footer class="footer">
+      <span class="ornament" aria-hidden="true"></span>
+      <span class="name">Ateliê Moema Odontologia</span>
+      Alameda dos Maracatins, 508<br />
+      Conjunto 24, 2º andar — Moema, São Paulo/SP
+      <div class="wa">WhatsApp: (11) 91258-2021</div>
+    </footer>
+
+  </main>
+</body>
+</html>
