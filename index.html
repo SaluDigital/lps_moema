@@ -93,30 +93,16 @@
     object-fit: contain;
   }
 
-  .title-block { display: flex; flex-direction: column; align-items: center; gap: 6px; }
-
-  h1.brand {
-    font-family: var(--serif);
-    font-weight: 500;
-    font-size: 30px;
-    line-height: 1.15;
-    letter-spacing: 0.005em;
-    color: var(--ink);
-    margin: 0;
-  }
-  h1.brand .em {
-    font-style: italic;
-    font-weight: 400;
-    color: var(--rose-deep);
+  .title-block {
+    display: flex;
+    justify-content: center;
+    width: 100%;
   }
 
-  .subtitle {
-    font-family: var(--serif);
-    font-style: italic;
-    font-size: 17px;
-    color: var(--ink-soft);
-    margin: 0;
-    font-weight: 400;
+  .title-logo {
+    display: block;
+    width: min(100%, 360px);
+    height: auto;
   }
 
   .lead {
@@ -309,8 +295,7 @@
   /* ---------- Mobile fine-tune ---------- */
   @media (max-width: 380px) {
     .page { padding: 32px 18px 48px; }
-    h1.brand { font-size: 26px; }
-    .subtitle { font-size: 15.5px; }
+    .title-logo { width: min(100%, 300px); }
     .cta-primary { font-size: 14.5px; padding: 16px 18px; }
     .card-link { padding: 14px 16px; grid-template-columns: 40px 1fr 16px; }
     .card-link .glyph { width: 40px; height: 40px; font-size: 18px; }
@@ -343,8 +328,7 @@
       </div>
 
       <div class="title-block">
-        <h1 class="brand">Ateliê <span class="em">Moema</span> Odontologia</h1>
-        <p class="subtitle">Uma clínica para chamar de sua ✨</p>
+        <img class="title-logo" src="logo-horizontal-moema.png" alt="Ateliê Moema Odontologia" />
       </div>
 
       <p class="lead">Escolha como deseja iniciar seu atendimento:</p>
@@ -431,8 +415,17 @@
       <a class="card-link" href="https://ateliemoemaodontologia.com.br/" target="_blank" rel="noopener">
         <span class="glyph" aria-hidden="true">💻</span>
         <span class="label">
-          <span class="t">Site completo</span>
+          <span class="t">Site</span>
           <span class="s">ateliemoemaodontologia.com.br</span>
+        </span>
+        <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+
+      <a class="card-link" href="https://ateliemoemaodontologia.com.br/conteudo/" target="_blank" rel="noopener">
+        <span class="glyph" aria-hidden="true">&#128196;</span>
+        <span class="label">
+          <span class="t">Blog</span>
+          <span class="s">Conte&uacute;dos e orienta&ccedil;&otilde;es</span>
         </span>
         <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
