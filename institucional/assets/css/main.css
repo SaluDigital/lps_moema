@@ -309,6 +309,8 @@ a.btn[href*="wa.me"]:hover {
   bottom: -30px;
   left: -30px;
   width: 120px; height: 120px;
+  display: grid;
+  place-items: center;
   color: var(--color-primary);
   z-index: 2;
   animation: tprotate 20s linear infinite;
@@ -316,6 +318,11 @@ a.btn[href*="wa.me"]:hover {
   border-radius: 50%;
   padding: 6px;
   box-shadow: var(--shadow-card);
+}
+.hero-badge svg {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 /* HERO variant: full-bleed */
@@ -417,6 +424,12 @@ a.btn[href*="wa.me"]:hover {
    SPECIALTIES
    ============================================================ */
 .specialties { padding: var(--section-y) 0; }
+.specialties + .mission {
+  padding-top: calc(var(--section-y) * 0.38);
+}
+.specialties + .mission .mission-grid {
+  align-items: start;
+}
 .specialty-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -427,8 +440,12 @@ a.btn[href*="wa.me"]:hover {
   border: 1px solid var(--color-line);
   border-radius: var(--radius-md);
   padding: 32px 24px;
+  overflow: hidden;
   text-align: center;
   transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+.specialty-card--media-top {
+  padding-top: 0;
 }
 .specialty-card image-slot {
   margin: 0 auto 20px;
@@ -438,12 +455,13 @@ a.btn[href*="wa.me"]:hover {
   margin: 0 auto 20px;
 }
 .specialty-media--profilaxia {
-  width: 146px;
-  height: 146px;
+  width: calc(100% + 48px);
+  height: 168px;
+  margin: -1px -24px 24px;
   overflow: hidden;
-  border-radius: 999px 999px 28px 28px;
-  background: linear-gradient(180deg, #fff8f5 0%, #f5e7df 100%);
-  box-shadow: inset 0 0 0 1px rgba(201, 138, 120, 0.16);
+  border-radius: 0 0 140px 140px / 0 0 46px 46px;
+  background: none;
+  box-shadow: none;
 }
 .specialty-photo {
   display: block;
@@ -452,9 +470,21 @@ a.btn[href*="wa.me"]:hover {
   object-fit: cover;
 }
 .specialty-photo--profilaxia {
-  object-position: center top;
-  clip-path: ellipse(88% 72% at 50% 18%);
-  transform: scale(1.18) translateY(-8px);
+  object-position: center 22%;
+  transform: scale(1.04);
+  clip-path: none;
+}
+.specialty-photo--clareamento {
+  object-position: calc(50% + 12px) calc(34% - 30px);
+  transform: scale(1.12);
+  clip-path: none;
+}
+.specialty-photo--circle {
+  object-position: center;
+  transform: scale(1.06);
+}
+.specialty-slot--top {
+  overflow: hidden;
 }
 .specialty-card h3 {
   font-size: 22px;
@@ -490,6 +520,10 @@ a.btn[href*="wa.me"]:hover {
   grid-template-columns: repeat(3, 1fr);
   gap: 40px 32px;
 }
+.team-grid--single {
+  grid-template-columns: minmax(280px, 720px);
+  justify-content: center;
+}
 .team-card {
   text-align: center;
   background: rgba(255, 255, 255, 0.04);
@@ -505,6 +539,20 @@ a.btn[href*="wa.me"]:hover {
 .team-card image-slot {
   margin: 0 auto 20px;
   max-width: 220px;
+}
+.team-photo-wrap {
+  width: min(100%, 320px);
+  margin: 0 auto 24px;
+  border-radius: 999px 999px 28px 28px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+.team-photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: center top;
 }
 .team-card h3 {
   font-size: 24px;
@@ -522,6 +570,17 @@ a.btn[href*="wa.me"]:hover {
   font-size: 12px;
   color: rgba(255, 255, 255, 0.7);
   margin: 0;
+}
+.team-bio {
+  margin-top: 20px;
+}
+.team-bio p {
+  margin: 0 0 12px;
+  color: rgba(255, 255, 255, 0.84);
+  line-height: 1.65;
+}
+.team-bio p:last-child {
+  margin-bottom: 0;
 }
 
 /* ============================================================
@@ -557,6 +616,17 @@ a.btn[href*="wa.me"]:hover {
 
 .mission-visual {
   position: relative;
+}
+.mission-photo-wrap {
+  border-radius: 24px;
+  overflow: hidden;
+}
+.mission-photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center top;
 }
 .mission-float {
   position: absolute;
@@ -596,40 +666,21 @@ a.btn[href*="wa.me"]:hover {
 .clinic-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: minmax(220px, auto);
-  gap: 20px;
+  gap: 24px;
 }
-.clinic-feature {
-  background: var(--color-surface);
+.clinic-photo-card {
   border-radius: var(--radius-md);
-  padding: 32px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  overflow: hidden;
+  background: var(--color-surface);
   border: 1px solid var(--color-line);
+  box-shadow: var(--shadow-soft);
 }
-.clinic-feature image-slot {
-  margin: -32px;
-  width: calc(100% + 64px);
-  height: calc(100% + 64px);
+.clinic-photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
 }
-.clinic-feature.wide {
-  grid-column: span 2;
-  align-items: center;
-  justify-content: center;
-  background: var(--color-primary-soft);
-  border: 0;
-}
-.clinic-feature-icon {
-  width: 56px; height: 56px;
-  border-radius: 50%;
-  background: var(--color-primary-soft);
-  color: var(--color-highlight);
-  display: flex; align-items: center; justify-content: center;
-  margin-bottom: 20px;
-}
-.clinic-feature h3 { margin-bottom: 8px; }
-.clinic-feature p { font-size: 14px; margin: 0; }
 
 /* ============================================================
    CTA FACETAS
@@ -644,6 +695,22 @@ a.btn[href*="wa.me"]:hover {
   grid-template-columns: 1fr 1.1fr;
   gap: 64px;
   align-items: center;
+}
+.cta-facetas-img {
+  order: 2;
+}
+.cta-facetas-copy {
+  order: 1;
+}
+.cta-facetas-img {
+  border-radius: 24px;
+  overflow: hidden;
+}
+.cta-facetas-photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
 }
 .cta-facetas-copy .display { color: var(--color-on-dark); margin-bottom: 24px; }
 .cta-facetas-copy p { color: rgba(255, 255, 255, 0.85); font-size: 17px; margin-bottom: 32px; max-width: 50ch; }
@@ -660,6 +727,17 @@ a.btn[href*="wa.me"]:hover {
   align-items: center;
 }
 .doctor-portrait { position: relative; }
+.doctor-photo-wrap {
+  border-radius: 999px 999px 24px 24px;
+  overflow: hidden;
+}
+.doctor-photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: center top;
+}
 .doctor-badge {
   position: absolute;
   top: 20px;
@@ -737,8 +815,9 @@ a.btn[href*="wa.me"]:hover {
 }
 .testimonial-slider {
   position: relative;
-  max-width: 920px;
+  max-width: 1240px;
   margin: 0 auto;
+  overflow: hidden;
 }
 .testimonial-track {
   display: flex;
@@ -746,10 +825,10 @@ a.btn[href*="wa.me"]:hover {
   transition: transform 0.5s var(--ease);
 }
 .testimonial-card {
-  flex: 0 0 100%;
+  flex: 0 0 calc((100% - 48px) / 3);
   background: var(--color-surface);
   border-radius: var(--radius-lg);
-  padding: 48px 56px;
+  padding: 32px 32px 28px;
   border: 1px solid var(--color-line);
   position: relative;
   box-shadow: var(--shadow-card);
@@ -757,17 +836,18 @@ a.btn[href*="wa.me"]:hover {
 .testimonial-card p {
   font-family: var(--font-display);
   font-style: italic;
-  font-size: 24px;
-  line-height: 1.4;
+  font-size: 18px;
+  line-height: 1.55;
   color: var(--color-heading);
   font-weight: 400;
+  margin: 12px 0 0;
 }
 .quote-mark {
   position: absolute;
-  top: 12px;
-  left: 32px;
+  top: 6px;
+  left: 20px;
   font-family: var(--font-display);
-  font-size: 120px;
+  font-size: 84px;
   line-height: 1;
   color: var(--color-primary-soft);
   z-index: 0;
@@ -777,9 +857,21 @@ a.btn[href*="wa.me"]:hover {
   display: flex;
   align-items: center;
   gap: 16px;
-  margin-top: 32px;
-  padding-top: 24px;
+  margin-top: 24px;
+  padding-top: 18px;
   border-top: 1px solid var(--color-line);
+}
+.testimonial-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--color-primary-soft);
+  color: var(--color-highlight);
+  display: grid;
+  place-items: center;
+  font-size: 22px;
+  font-weight: 700;
+  flex-shrink: 0;
 }
 .testimonial-author strong {
   display: block;
@@ -867,6 +959,11 @@ a.btn[href*="wa.me"]:hover {
   margin-bottom: 56px;
 }
 .footer-brand .brand-text { gap: 0; }
+.footer-logo {
+  display: block;
+  width: min(100%, 240px);
+  height: auto;
+}
 .footer-tag {
   margin-top: 20px;
   font-size: 14px;
@@ -1025,28 +1122,58 @@ image-slot {
     text-align: center;
   }
   .big-counter-card { max-width: 240px; margin: 0 auto; }
-  .testimonial-card { padding: 32px 28px; }
+  .testimonial-card { flex-basis: calc((100% - 24px) / 2); padding: 32px 28px; }
   .testimonial-card p { font-size: 19px; }
   .ribbon-track { font-size: 22px; gap: 32px; }
   .footer-grid {
     grid-template-columns: 1fr;
     gap: 40px;
-    text-align: left;
+    text-align: center;
   }
-  .footer-fine { flex-direction: column; gap: 8px; text-align: left; }
+  .footer-brand { display: flex; flex-direction: column; align-items: center; }
+  .footer-brand .brand { justify-content: center; }
+  .footer-tag { margin-left: auto; margin-right: auto; }
+  .footer-list { align-items: center; }
+  .footer-fine { flex-direction: column; gap: 8px; text-align: center; }
 }
 
 @media (max-width: 480px) {
   .container { padding: 0 20px; }
   .hero { padding: 40px 0 56px; }
-  .hero-meta { grid-template-columns: 1fr; }
+  .hero-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    text-align: center;
+  }
+  .hero-copy { display: contents; }
+  .hero-logo { order: 1; margin-left: auto; margin-right: auto; }
+  .hero-copy .display { order: 2; }
+  .hero-copy .lede { order: 3; }
+  .hero-cta { order: 4; justify-content: center; }
+  .hero-visual { order: 5; }
+  .hero-meta {
+    order: 6;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    text-align: center;
+    padding-top: 0;
+    border-top: 0;
+    margin-top: 4px;
+  }
   .hero-meta li:nth-child(3) { grid-column: span 1; }
+  .hero-meta strong { font-size: 40px; }
+  .hero-meta span {
+    font-size: 17px;
+    line-height: 1.45;
+    letter-spacing: 0.01em;
+  }
   .specialty-grid { grid-template-columns: 1fr; }
   .team-grid { grid-template-columns: 1fr; }
-  .clinic-grid { grid-template-columns: 1fr; }
+  .clinic-grid { grid-template-columns: 1fr 1fr; }
   .clinic-feature.wide { grid-column: span 1; }
   .about-intro-gallery { gap: 12px; }
-  .testimonial-card { padding: 28px 24px; }
+  .testimonial-card { flex-basis: 100%; padding: 28px 24px; }
   .quote-mark { font-size: 72px; top: 4px; left: 16px; }
   .testimonial-card p { font-size: 17px; }
   .back-to-top { bottom: 16px; right: 16px; width: 42px; height: 42px; }

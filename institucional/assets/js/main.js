@@ -122,34 +122,65 @@
     const next = document.querySelector('.slider-next');
     let idx = 0;
     let autoTimer = null;
+    let dots = [];
 
-    cards.forEach((_, i) => {
-      const b = document.createElement('button');
-      b.setAttribute('aria-label', 'Ir para depoimento ' + (i + 1));
-      b.addEventListener('click', () => goTo(i));
-      dotsHost.appendChild(b);
-    });
-    const dots = dotsHost.querySelectorAll('button');
+    function getVisibleCards() {
+      if (window.innerWidth <= 480) return 1;
+      if (window.innerWidth <= 900) return 2;
+      return 3;
+    }
+
+    function getMaxIndex() {
+      return Math.max(0, cards.length - getVisibleCards());
+    }
+
+    function buildDots() {
+      dotsHost.innerHTML = '';
+      for (let i = 0; i <= getMaxIndex(); i += 1) {
+        const b = document.createElement('button');
+        b.setAttribute('aria-label', 'Ir para grupo de depoimentos ' + (i + 1));
+        b.addEventListener('click', () => goTo(i));
+        dotsHost.appendChild(b);
+      }
+      dots = Array.from(dotsHost.querySelectorAll('button'));
+    }
 
     function update() {
-      track.style.transform = 'translateX(' + (-idx * 100) + '%)';
+      const card = cards[0];
+      const gap = parseFloat(window.getComputedStyle(track).gap || '0');
+      const step = card ? card.getBoundingClientRect().width + gap : 0;
+      track.style.transform = 'translateX(' + (-idx * step) + 'px)';
       dots.forEach((d, i) => d.classList.toggle('is-active', i === idx));
     }
+
     function goTo(i) {
-      idx = (i + cards.length) % cards.length;
+      const maxIndex = getMaxIndex();
+      if (i < 0) idx = maxIndex;
+      else if (i > maxIndex) idx = 0;
+      else idx = i;
       update();
       restartAuto();
     }
+
     function nextSlide() { goTo(idx + 1); }
     function prevSlide() { goTo(idx - 1); }
     prev && prev.addEventListener('click', prevSlide);
     next && next.addEventListener('click', nextSlide);
+
     function restartAuto() {
       if (autoTimer) clearInterval(autoTimer);
       autoTimer = setInterval(nextSlide, 7000);
     }
-    update();
+
+    function syncSlider() {
+      buildDots();
+      idx = Math.min(idx, getMaxIndex());
+      update();
+    }
+
+    syncSlider();
     restartAuto();
+    window.addEventListener('resize', syncSlider);
     // pause on hover
     const slider = document.getElementById('testimonial-slider');
     slider.addEventListener('mouseenter', () => clearInterval(autoTimer));

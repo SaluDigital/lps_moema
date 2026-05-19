@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR" data-palette="ameixa" data-hero="split">
 <head>
   <meta charset="UTF-8" />
@@ -28,7 +28,7 @@
 
 <main>
 
-  <!-- ───────────────────────── HERO ───────────────────────── -->
+  <!-- HERO -->
   <section class="hero" id="home" data-screen-label="01 Hero">
     <div class="hero-decor hero-decor--1" aria-hidden="true"></div>
     <div class="hero-decor hero-decor--2" aria-hidden="true"></div>
@@ -72,14 +72,14 @@
             <text font-family="DM Sans" font-size="9" letter-spacing="3" fill="currentColor">
               <textPath href="#circ" startOffset="0">ateliê moema · odontologia · ateliê moema · odontologia · </textPath>
             </text>
-            <path d="M60 34C63.5 47 73 56.5 86 60C73 63.5 63.5 73 60 86C56.5 73 47 63.5 34 60C47 56.5 56.5 47 60 34Z" fill="currentColor"></path>
+            <image href="favicon.png" x="42" y="42" width="36" height="36" preserveAspectRatio="xMidYMid meet"></image>
           </svg>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ───────────────────────── ABOUT INTRO ───────────────────────── -->
+  <!-- ABOUT INTRO -->
   <section class="about-intro" id="sobre" data-screen-label="02 Sobre">
     <div class="container">
       <div class="about-intro-grid">
@@ -107,7 +107,7 @@
     </div>
   </section>
 
-  <!-- ───────────────────────── COUNTERS ───────────────────────── -->
+  <!-- COUNTERS -->
   <section class="counters" aria-label="Métricas">
     <div class="container">
       <ul class="counter-grid">
@@ -131,7 +131,7 @@
     </div>
   </section>
 
-  <!-- ───────────────────────── ESPECIALIDADES ───────────────────────── -->
+  <!-- ESPECIALIDADES -->
   <section class="specialties" id="especialidades" data-screen-label="03 Especialidades">
     <div class="container">
       <header class="section-head section-head--center">
@@ -142,71 +142,137 @@
 
       <div class="specialty-grid">
         <!-- 12 cards -->
-        <article class="card specialty-card">
+        <article class="card specialty-card specialty-card--media-top">
           <div class="specialty-media specialty-media--profilaxia">
             <img
               class="specialty-photo specialty-photo--profilaxia"
-              src="assets/profilaxia.webp"
+              src="profilaxia.png"
               alt="Sorriso após profilaxia"
-              data-fallback-srcs="profilaxia.webp|assets/images/profilaxia.webp|assets/img/profilaxia.webp|assets/uploads/profilaxia.webp"
+              data-fallback-srcs="assets/profilaxia.webp|profilaxia.webp|assets/images/profilaxia.webp|assets/img/profilaxia.webp|assets/uploads/profilaxia.webp"
               onerror="(function(img){const list=(img.dataset.fallbackSrcs||'').split('|').filter(Boolean);const tried=img.dataset.triedSrcs?img.dataset.triedSrcs.split('|'):[];const next=list.find(src=>!tried.includes(src)&&src!==img.getAttribute('src'));if(next){tried.push(next);img.dataset.triedSrcs=tried.join('|');img.src=next;}})(this)"
             />
           </div>
           <h3>Limpeza</h3>
           <p>Profilaxia completa para remover placas, manchas e tártaro, devolvendo o frescor e o brilho natural.</p>
         </article>
-        <article class="card specialty-card">
-          <image-slot id="spec-2" shape="circle" placeholder="Clareamento" style="width:120px;height:120px;"></image-slot>
+        <article class="card specialty-card specialty-card--media-top">
+          <div class="specialty-media specialty-media--profilaxia">
+            <img
+              class="specialty-photo specialty-photo--clareamento"
+              src="clareamento.webp"
+              alt="Clareamento dental"
+            />
+          </div>
           <h3>Clareamento</h3>
           <p>Clareamento dental seguro, de consultório ou caseiro supervisionado, com resultados graduais e duradouros.</p>
         </article>
-        <article class="card specialty-card">
-          <image-slot id="spec-3" shape="circle" placeholder="Restauração" style="width:120px;height:120px;"></image-slot>
+        <article class="card specialty-card specialty-card--media-top">
+          <div class="specialty-media specialty-media--profilaxia">
+            <img
+              class="specialty-photo specialty-photo--circle"
+              src="restauracao-dental.jpg"
+              alt="Restauração dental"
+            />
+          </div>
           <h3>Restauração</h3>
           <p>Restaurações estéticas em resina composta, reproduzindo cor e translucidez do dente natural.</p>
         </article>
-        <article class="card specialty-card">
-          <image-slot id="spec-4" shape="circle" placeholder="Tratamento de Canal" style="width:120px;height:120px;"></image-slot>
+        <article class="card specialty-card specialty-card--media-top">
+          <div class="specialty-media specialty-media--profilaxia">
+            <img
+              class="specialty-photo specialty-photo--circle"
+              src="canal.jpg"
+              alt="Tratamento de canal"
+            />
+          </div>
           <h3>Tratamento de Canal</h3>
           <p>Endodontia minimamente invasiva para preservar o dente e eliminar a dor com segurança.</p>
         </article>
-        <article class="card specialty-card">
-          <image-slot id="spec-5" shape="circle" placeholder="Implantes" style="width:120px;height:120px;"></image-slot>
+        <article class="card specialty-card specialty-card--media-top">
+          <div class="specialty-media specialty-media--profilaxia">
+            <img
+              class="specialty-photo specialty-photo--circle"
+              src="implante.jpg"
+              alt="Implantes dentários"
+            />
+          </div>
           <h3>Implantes</h3>
           <p>Reabilitação com implantes dentários planejados digitalmente, devolvendo função e estética.</p>
         </article>
-        <article class="card specialty-card">
-          <image-slot id="spec-6" shape="circle" placeholder="Prótese" style="width:120px;height:120px;"></image-slot>
+        <article class="card specialty-card specialty-card--media-top">
+          <div class="specialty-media specialty-media--profilaxia">
+            <img
+              class="specialty-photo specialty-photo--circle"
+              src="protese.jpg"
+              alt="Prótese dentária"
+            />
+          </div>
           <h3>Prótese</h3>
           <p>Próteses fixas e removíveis com encaixe preciso e acabamento que valoriza o sorriso.</p>
         </article>
-        <article class="card specialty-card">
-          <image-slot id="spec-7" shape="circle" placeholder="Facetas em Resina" style="width:120px;height:120px;"></image-slot>
+        <article class="card specialty-card specialty-card--media-top">
+          <div class="specialty-media specialty-media--profilaxia">
+            <img
+              class="specialty-photo specialty-photo--circle"
+              src="facetas.png"
+              alt="Facetas em resina"
+            />
+          </div>
           <h3>Facetas em Resina</h3>
           <p>Transformação estética em poucas sessões, sem desgaste, com resinas nanocerâmicas.</p>
         </article>
-        <article class="card specialty-card">
-          <image-slot id="spec-8" shape="circle" placeholder="Lentes de Contato" style="width:120px;height:120px;"></image-slot>
+        <article class="card specialty-card specialty-card--media-top">
+          <div class="specialty-media specialty-media--profilaxia">
+            <img
+              class="specialty-photo specialty-photo--circle"
+              src="lentes.jpg"
+              alt="Lentes de contato dental"
+            />
+          </div>
           <h3>Lentes de Contato</h3>
           <p>Lâminas ultrafinas de porcelana para harmonizar cor, formato e proporção do sorriso.</p>
         </article>
-        <article class="card specialty-card">
-          <image-slot id="spec-9" shape="circle" placeholder="Cirurgia" style="width:120px;height:120px;"></image-slot>
+        <article class="card specialty-card specialty-card--media-top">
+          <div class="specialty-media specialty-media--profilaxia">
+            <img
+              class="specialty-photo specialty-photo--circle"
+              src="cirurgia.jpg"
+              alt="Cirurgia odontológica"
+            />
+          </div>
           <h3>Cirurgia</h3>
           <p>Cirurgias orais — sisos, enxertos e regenerações — com protocolos modernos de recuperação.</p>
         </article>
-        <article class="card specialty-card">
-          <image-slot id="spec-10" shape="circle" placeholder="Ortodontia" style="width:120px;height:120px;"></image-slot>
+        <article class="card specialty-card specialty-card--media-top">
+          <div class="specialty-media specialty-media--profilaxia">
+            <img
+              class="specialty-photo specialty-photo--circle"
+              src="aparelho.jpg"
+              alt="Ortodontia"
+            />
+          </div>
           <h3>Ortodontia</h3>
           <p>Aparelhos fixos e estéticos para alinhar dentes e equilibrar a mordida em qualquer idade.</p>
         </article>
-        <article class="card specialty-card">
-          <image-slot id="spec-11" shape="circle" placeholder="Alinhadores" style="width:120px;height:120px;"></image-slot>
+        <article class="card specialty-card specialty-card--media-top">
+          <div class="specialty-media specialty-media--profilaxia">
+            <img
+              class="specialty-photo specialty-photo--circle"
+              src="alinhadores.jpeg"
+              alt="Alinhadores transparentes"
+            />
+          </div>
           <h3>Alinhadores</h3>
           <p>Tratamento ortodôntico com placas transparentes — discretas, removíveis e confortáveis.</p>
         </article>
-        <article class="card specialty-card">
-          <image-slot id="spec-12" shape="circle" placeholder="Odontopediatria" style="width:120px;height:120px;"></image-slot>
+        <article class="card specialty-card specialty-card--media-top">
+          <div class="specialty-media specialty-media--profilaxia">
+            <img
+              class="specialty-photo specialty-photo--circle"
+              src="odontopediatria.jpg"
+              alt="Odontopediatria"
+            />
+          </div>
           <h3>Odontopediatria</h3>
           <p>Cuidado lúdico e acolhedor para crianças, construindo uma relação leve com o dentista.</p>
         </article>
@@ -218,81 +284,7 @@
     </div>
   </section>
 
-  <!-- ───────────────────────── EQUIPE ───────────────────────── -->
-  <section class="team" id="equipe" data-screen-label="04 Equipe">
-    <div class="container">
-      <header class="section-head section-head--center on-dark">
-        <span class="eyebrow eyebrow--center"><span class="eyebrow-line"></span> Quem cuida de você <span class="eyebrow-line"></span></span>
-        <h2 class="display">Equipe</h2>
-        <p>Profissionais reunidos em torno de uma mesma filosofia: técnica, ética e acolhimento.</p>
-      </header>
-
-      <div class="team-grid">
-        <article class="team-card">
-          <image-slot id="team-1" shape="rounded" radius="999px 999px 28px 28px" placeholder="Foto Dra. Elis" style="width:100%;aspect-ratio:3/4;"></image-slot>
-          <h3>Dra. Elis Debora Rocha</h3>
-          <p class="role">Responsável Técnica</p>
-          <p class="cro">CROSP 127.773 · Reabilitação Oral</p>
-        </article>
-        <article class="team-card">
-          <image-slot id="team-2" shape="rounded" radius="999px 999px 28px 28px" placeholder="Foto profissional 2" style="width:100%;aspect-ratio:3/4;"></image-slot>
-          <h3>Dr. Profissional 2</h3>
-          <p class="role">Implantodontia</p>
-          <p class="cro">CROSP 000.000</p>
-        </article>
-        <article class="team-card">
-          <image-slot id="team-3" shape="rounded" radius="999px 999px 28px 28px" placeholder="Foto profissional 3" style="width:100%;aspect-ratio:3/4;"></image-slot>
-          <h3>Dra. Profissional 3</h3>
-          <p class="role">Ortodontia</p>
-          <p class="cro">CROSP 000.000</p>
-        </article>
-        <article class="team-card">
-          <image-slot id="team-4" shape="rounded" radius="999px 999px 28px 28px" placeholder="Foto profissional 4" style="width:100%;aspect-ratio:3/4;"></image-slot>
-          <h3>Dra. Profissional 4</h3>
-          <p class="role">Endodontia</p>
-          <p class="cro">CROSP 000.000</p>
-        </article>
-        <article class="team-card">
-          <image-slot id="team-5" shape="rounded" radius="999px 999px 28px 28px" placeholder="Foto profissional 5" style="width:100%;aspect-ratio:3/4;"></image-slot>
-          <h3>Dra. Profissional 5</h3>
-          <p class="role">Odontopediatria</p>
-          <p class="cro">CROSP 000.000</p>
-        </article>
-        <article class="team-card">
-          <image-slot id="team-6" shape="rounded" radius="999px 999px 28px 28px" placeholder="Foto profissional 6" style="width:100%;aspect-ratio:3/4;"></image-slot>
-          <h3>Dra. Profissional 6</h3>
-          <p class="role">Periodontia</p>
-          <p class="cro">CROSP 000.000</p>
-        </article>
-        <article class="team-card">
-          <image-slot id="team-7" shape="rounded" radius="999px 999px 28px 28px" placeholder="Foto profissional 7" style="width:100%;aspect-ratio:3/4;"></image-slot>
-          <h3>Dr. Profissional 7</h3>
-          <p class="role">Cirurgia Oral</p>
-          <p class="cro">CROSP 000.000</p>
-        </article>
-        <article class="team-card">
-          <image-slot id="team-8" shape="rounded" radius="999px 999px 28px 28px" placeholder="Foto profissional 8" style="width:100%;aspect-ratio:3/4;"></image-slot>
-          <h3>Dra. Profissional 8</h3>
-          <p class="role">Estética Dental</p>
-          <p class="cro">CROSP 000.000</p>
-        </article>
-        <article class="team-card">
-          <image-slot id="team-9" shape="rounded" radius="999px 999px 28px 28px" placeholder="Foto profissional 9" style="width:100%;aspect-ratio:3/4;"></image-slot>
-          <h3>Dra. Profissional 9</h3>
-          <p class="role">Harmonização Orofacial</p>
-          <p class="cro">CROSP 000.000</p>
-        </article>
-        <article class="team-card">
-          <image-slot id="team-10" shape="rounded" radius="999px 999px 28px 28px" placeholder="Foto recepção" style="width:100%;aspect-ratio:3/4;"></image-slot>
-          <h3>Recepção</h3>
-          <p class="role">Equipe de acolhimento</p>
-          <p class="cro">2024 — 2026</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ───────────────────────── MISSÃO ───────────────────────── -->
+  <!-- MISSÃO -->
   <section class="mission" id="missao" data-screen-label="05 Missão">
     <div class="container mission-grid">
       <div class="mission-copy">
@@ -308,7 +300,9 @@
         <a class="btn btn-primary" href="https://wa.me/5511912582021" target="_blank" rel="noopener">Entre em contato</a>
       </div>
       <div class="mission-visual">
-        <image-slot id="mission-img" shape="rounded" radius="24px" placeholder="Foto da clínica / ambiente" style="width:100%;aspect-ratio:4/5;"></image-slot>
+        <div class="mission-photo-wrap">
+          <img class="mission-photo" src="foto11.jpg" alt="Atendimento na clínica" />
+        </div>
         <div class="mission-float" aria-hidden="true">
           <svg viewBox="0 0 24 24" width="22" height="22"><path d="M12 21s-7-5.5-7-11a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.5-7 11-7 11z" fill="currentColor"></path></svg>
           <strong>+1.500</strong>
@@ -318,7 +312,7 @@
     </div>
   </section>
 
-  <!-- ───────────────────────── NOSSA CLÍNICA ───────────────────────── -->
+  <!-- NOSSA CLÍNICA -->
   <section class="clinic" id="clinica" data-screen-label="06 Clínica">
     <div class="container">
       <header class="section-head section-head--center">
@@ -327,38 +321,27 @@
       </header>
 
       <div class="clinic-grid">
-        <article class="clinic-feature">
-          <div class="clinic-feature-icon">
-            <svg viewBox="0 0 32 32" width="24" height="24"><path d="M4 14h24v14H4z" fill="none" stroke="currentColor" stroke-width="1.5"></path><path d="M4 14l12-9 12 9" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path><path d="M13 28v-7h6v7" fill="none" stroke="currentColor" stroke-width="1.5"></path></svg>
-          </div>
-          <h3>Ambiente acolhedor</h3>
-          <p>Sala de espera silenciosa, aromas suaves e atendimento pontual.</p>
+        <article class="clinic-photo-card">
+          <img class="clinic-photo" src="f5 (1).jpg" alt="Ambiente da clínica" />
         </article>
-        <article class="clinic-feature">
-          <image-slot id="clinic-1" shape="rounded" radius="18px" placeholder="Foto sala 1" style="width:100%;aspect-ratio:4/3;"></image-slot>
+        <article class="clinic-photo-card">
+          <img class="clinic-photo" src="gal1.jpg" alt="Espaço da clínica" />
         </article>
-        <article class="clinic-feature">
-          <image-slot id="clinic-2" shape="rounded" radius="18px" placeholder="Foto sala 2" style="width:100%;aspect-ratio:4/3;"></image-slot>
+        <article class="clinic-photo-card">
+          <img class="clinic-photo" src="f2 (1).jpg" alt="Consultório da clínica" />
         </article>
-        <article class="clinic-feature">
-          <div class="clinic-feature-icon">
-            <svg viewBox="0 0 32 32" width="24" height="24"><circle cx="16" cy="11" r="5" fill="none" stroke="currentColor" stroke-width="1.5"></circle><path d="M6 26c2-5 6-7 10-7s8 2 10 7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg>
-          </div>
-          <h3>Equipe completa</h3>
-          <p>Mais de 15 especialidades em um mesmo endereço.</p>
-        </article>
-        <article class="clinic-feature wide">
-          <a class="btn btn-primary" href="https://www.waze.com/pt-BR/live-map/directions/br/sp/alameda-dos-maracatins,-508?to=place.ChIJMVhIaxBazpQRogo9cCYW36U" target="_blank" rel="noopener">Como chegar</a>
+        <article class="clinic-photo-card">
+          <img class="clinic-photo" src="foto10.jpg" alt="Detalhe da clínica" />
         </article>
       </div>
     </div>
   </section>
 
-  <!-- ───────────────────────── CTA FACETAS ───────────────────────── -->
+  <!-- CTA FACETAS -->
   <section class="cta-facetas" id="facetas" data-screen-label="07 Facetas">
     <div class="container cta-facetas-grid">
       <div class="cta-facetas-img">
-        <image-slot id="facetas-img" shape="rounded" radius="24px" placeholder="Foto de sorriso com facetas" style="width:100%;aspect-ratio:4/3;"></image-slot>
+        <img class="cta-facetas-photo" src="facetas-resina.webp" alt="Sorriso com facetas em resina" />
       </div>
       <div class="cta-facetas-copy">
         <span class="eyebrow eyebrow--light"><span class="eyebrow-line"></span> Em destaque</span>
@@ -369,11 +352,13 @@
     </div>
   </section>
 
-  <!-- ───────────────────────── DRA. ELIS ───────────────────────── -->
+  <!-- DRA. ELIS -->
   <section class="doctor" id="dra-elis" data-screen-label="08 Dra Elis">
     <div class="container doctor-grid">
       <div class="doctor-portrait">
-        <image-slot id="dra-elis-portrait" shape="rounded" radius="999px 999px 24px 24px" placeholder="Retrato Dra. Elis" style="width:100%;aspect-ratio:3/4;"></image-slot>
+        <div class="doctor-photo-wrap">
+          <img class="doctor-photo" src="gal2.jpg" alt="Dra. Elis Debora Rocha" />
+        </div>
         <div class="doctor-badge" aria-hidden="true">
           <svg viewBox="0 0 100 100" width="84" height="84">
             <defs><path id="dcirc" d="M50,50 m-40,0 a40,40 0 1,1 80,0 a40,40 0 1,1 -80,0"></path></defs>
@@ -387,8 +372,8 @@
       <div class="doctor-copy">
         <span class="eyebrow"><span class="eyebrow-line"></span> Conheça a profissional</span>
         <h2 class="display">Dra. Elis Debora Rocha</h2>
-        <p class="lede">Cirurgiã-dentista, especialista em reabilitação oral e estética avançada. Há mais de uma década dedicada a desenhar sorrisos que parecem ter sempre estado ali.</p>
-        <p>Formada em uma das principais escolas de odontologia do Brasil, a Dra. Elis acredita que sorrisos são únicos como assinaturas — e que cada tratamento precisa começar pela escuta. No Ateliê Moema, ela lidera uma equipe multidisciplinar que combina técnica, sensibilidade estética e atendimento integrativo.</p>
+        <p class="lede">Cirurgiã-dentista com atuação focada em estética e reabilitação, unindo planejamento cuidadoso, olhar humanizado e estratégia em cada tratamento.</p>
+        <p>Formada em Odontologia pela Uninove, a Dra. Elis Debora Rocha construiu sua trajetória com foco em excelência clínica e cuidado individualizado. É especialista em Implantes Dentários pela USP, possui residência em Alinhadores Ortodônticos, sendo reconhecida como Invisa Doctor, e residência em Harmonização Facial, ampliando sua expertise em estética e cuidados faciais.</p>
         <div class="doctor-cta">
           <a class="btn btn-primary" href="https://wa.me/5511912582021" target="_blank" rel="noopener">Marcar consulta</a>
           <a class="btn btn-ghost" href="https://www.instagram.com/dra.elisdrocha/" target="_blank" rel="noopener">@dra.elisdrocha</a>
@@ -397,29 +382,7 @@
     </div>
   </section>
 
-  <!-- ───────────────────────── BIG COUNTER ───────────────────────── -->
-  <section class="big-counter">
-    <div class="container big-counter-grid">
-      <div class="big-counter-img">
-        <image-slot id="bigc-img" shape="rounded" radius="18px" placeholder="Sorriso de paciente" style="width:100%;aspect-ratio:4/3;"></image-slot>
-      </div>
-      <div class="big-counter-card">
-        <span class="counter-num xl" data-target="1500" data-suffix="+">0</span>
-        <p>Pacientes felizes</p>
-      </div>
-      <div class="big-counter-copy">
-        <span class="eyebrow"><span class="eyebrow-line"></span> Por que pacientes voltam</span>
-        <h2 class="display">O que nossos pacientes falam sobre nós.</h2>
-        <p>Resultado natural, atendimento próximo e um time que escuta antes de propor. Esse é o tripé que faz com que oito em cada dez pacientes do Ateliê Moema venham por indicação.</p>
-        <div class="rating">
-          <span class="stars" aria-label="5 estrelas">★★★★★</span>
-          <span>Avaliação média no Google · 4,9</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ───────────────────────── DEPOIMENTOS ───────────────────────── -->
+  <!-- DEPOIMENTOS -->
   <section class="testimonials" id="depoimentos" data-screen-label="09 Depoimentos">
     <div class="container">
       <header class="section-head section-head--center">
@@ -431,34 +394,89 @@
         <div class="testimonial-track" id="testimonial-track">
           <article class="testimonial-card">
             <span class="quote-mark" aria-hidden="true">“</span>
-            <p>Saí da primeira consulta com um plano claro e sem aquele aperto no peito. Hoje, sorrir voltou a ser fácil. A Dra. Elis e o time inteiro são atenciosos do começo ao fim.</p>
+            <p>Eu amo essas meninas! Simplesmente apaixonada. Dra Elis cuida de mim a anos, não deixo mais.</p>
             <div class="testimonial-author">
-              <image-slot id="t-1" shape="circle" placeholder="Foto" style="width:56px;height:56px;"></image-slot>
+              <div class="testimonial-avatar" aria-hidden="true">S</div>
               <div>
-                <strong>Mariana T.</strong>
-                <span>Paciente desde 2023</span>
+                <strong>Silvia Oliveira</strong>
+                <span>Google Reviews</span>
               </div>
             </div>
           </article>
           <article class="testimonial-card">
             <span class="quote-mark" aria-hidden="true">“</span>
-            <p>Fiz lentes de contato no Ateliê e parece que sempre foram meus dentes. A naturalidade do resultado me surpreendeu — e a recepção é um capítulo à parte, super acolhedora.</p>
+            <p>Melhor clínica odontológica não há, desde a recepção (Daniela) até a doutora (Elis). Mãos de fada, explicação, cuidados e o melhor carinho e respeito maior que tudo. Ao entrar já sentimos a paz que ali transmite.</p>
             <div class="testimonial-author">
-              <image-slot id="t-2" shape="circle" placeholder="Foto" style="width:56px;height:56px;"></image-slot>
+              <div class="testimonial-avatar" aria-hidden="true">A</div>
               <div>
-                <strong>Camila R.</strong>
-                <span>Paciente desde 2022</span>
+                <strong>Aline</strong>
+                <span>Google Reviews</span>
               </div>
             </div>
           </article>
           <article class="testimonial-card">
             <span class="quote-mark" aria-hidden="true">“</span>
-            <p>Trouxe minha filha pequena pela primeira vez e ela saiu pedindo pra voltar. Profissionais sensíveis, pacientes, e uma estrutura impecável. Recomendo demais.</p>
+            <p>Encontrei a Dra Patrine por uma amiga e sou muito grato a essas duas mulheres! Vim da Austrália para visitar minha família em Curitiba e fiz questão de vir para São Paulo realizar um sonho, deixar o meu sorriso bonito, harmonioso e natural. Se pudesse dava 10 estrelas!</p>
             <div class="testimonial-author">
-              <image-slot id="t-3" shape="circle" placeholder="Foto" style="width:56px;height:56px;"></image-slot>
+              <div class="testimonial-avatar" aria-hidden="true">J</div>
               <div>
-                <strong>Patrícia M.</strong>
-                <span>Paciente desde 2024</span>
+                <strong>Jean Alves</strong>
+                <span>Google Reviews</span>
+              </div>
+            </div>
+          </article>
+          <article class="testimonial-card">
+            <span class="quote-mark" aria-hidden="true">“</span>
+            <p>As meninas são maravilhosas! Um lugar acolhedor.</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar" aria-hidden="true">E</div>
+              <div>
+                <strong>Ellen Mayara</strong>
+                <span>Google Reviews</span>
+              </div>
+            </div>
+          </article>
+          <article class="testimonial-card">
+            <span class="quote-mark" aria-hidden="true">“</span>
+            <p>Ótima profissional, super atenciosa e muito competente. Meu tratamento ficou sensacional.</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar" aria-hidden="true">H</div>
+              <div>
+                <strong>Hugo Camilo</strong>
+                <span>Google Reviews</span>
+              </div>
+            </div>
+          </article>
+          <article class="testimonial-card">
+            <span class="quote-mark" aria-hidden="true">“</span>
+            <p>Minha experiência foi ótima, além das dicas e indicações para o meu tratamento.</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar" aria-hidden="true">V</div>
+              <div>
+                <strong>Vanessa Targino</strong>
+                <span>Google Reviews</span>
+              </div>
+            </div>
+          </article>
+          <article class="testimonial-card">
+            <span class="quote-mark" aria-hidden="true">“</span>
+            <p>Amo a Dra Elis, todo trabalho é feito com atenção e dedicação. Ela é carinhosa, carismática e muito agradável. Tem respeito e é compromissada em resolver os problemas com seriedade. Recomendo 1000%!</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar" aria-hidden="true">S</div>
+              <div>
+                <strong>Silvia Soller</strong>
+                <span>Google Reviews</span>
+              </div>
+            </div>
+          </article>
+          <article class="testimonial-card">
+            <span class="quote-mark" aria-hidden="true">“</span>
+            <p>Excelente atendimento. Ganhou a estrela de dentista Premium.</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar" aria-hidden="true">M</div>
+              <div>
+                <strong>Marlon MBS</strong>
+                <span>Google Reviews</span>
               </div>
             </div>
           </article>
@@ -472,7 +490,7 @@
     </div>
   </section>
 
-  <!-- ───────────────────────── FAIXA FINAL ───────────────────────── -->
+  <!-- FAIXA FINAL -->
   <section class="ribbon" aria-label="Convite final">
     <div class="ribbon-track">
       <span>★ Venha iluminar seu sorriso</span>
@@ -489,15 +507,12 @@
 
 </main>
 
-<!-- ───────────────────────── FOOTER ───────────────────────── -->
+<!-- FOOTER -->
 <footer class="site-footer" id="contato" data-screen-label="10 Contato">
   <div class="container footer-grid">
     <div class="footer-col footer-brand">
       <a class="brand brand--light" href="#home">
-        <span class="brand-mark" aria-hidden="true">
-          <svg viewBox="0 0 48 48" width="40" height="40"><circle cx="24" cy="24" r="22" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.5"></circle><path d="M24 11c-1.5 3-4.5 5-7.5 5.5 1.5 2.5 2 5.5 1 8.5 3-1 6.5-0.5 9 1.5 0-3 1.5-5.5 4-7-2.5-1-4.5-3-5-5.5z" fill="currentColor"></path><ellipse cx="24" cy="32" rx="6" ry="4.5" fill="none" stroke="currentColor" stroke-width="1.4"></ellipse></svg>
-        </span>
-        <span class="brand-text"><span class="brand-title">Ateliê Moema</span><span class="brand-sub">odontologia</span></span>
+        <img class="footer-logo" src="logo-horizontal-moema.webp" alt="Ateliê Moema Odontologia" />
       </a>
       <p class="footer-tag">Odontologia premium em Moema — estética, função e cuidado integrativo num só lugar.</p>
     </div>
