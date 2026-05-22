@@ -919,6 +919,11 @@ a.btn[href*="wa.me"]:hover {
   width: 24px;
   border-radius: 4px;
 }
+.testimonials-more {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+}
 
 /* ============================================================
    RIBBON
