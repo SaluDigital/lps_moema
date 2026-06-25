@@ -62,6 +62,23 @@
     if (e.key === 'Escape') closeCanvas();
   });
 
+  /* ---------- Promo pop ---------- */
+  const promoPop = document.getElementById('promo-pop');
+  const promoPopClose = document.getElementById('promo-pop-close');
+
+  function closePromoPop() {
+    if (!promoPop) return;
+    promoPop.hidden = true;
+    promoPop.setAttribute('aria-hidden', 'true');
+  }
+
+  if (promoPop) {
+    promoPop.hidden = false;
+    promoPop.setAttribute('aria-hidden', 'false');
+  }
+
+  promoPopClose && promoPopClose.addEventListener('click', closePromoPop);
+
   /* ---------- Counter animation (odometer-like) ---------- */
   const counters = document.querySelectorAll('.counter-num[data-target]');
   const counterObserver = new IntersectionObserver(entries => {
